@@ -58,22 +58,22 @@ Return: None
 */
 
 void runDuckGooseGame(int inCircle[], int size, int teacher, int ducksLeft) {
+	//int i = inCircle[0]; Just saved these in case I need to revert
 	int inCount = 0;
 	int ducksLeftFunc = ducksLeft;
-	while (inCircle > 0) {
-		for (int i = 0; i < size; i++) {
-			if (inCircle[i] == true && teacher == inCount && ducksLeft > 0) {
-				ducksLeft--;
+	//while (inCircle[i] = true && i < size) {
+	for (int i = 0; i < size; i++){
+			if (inCircle[i] = true && teacher == inCount && ducksLeftFunc > 0) {
+				ducksLeftFunc--;
 			}
-			else if (inCircle[i] == true && teacher == inCount && ducksLeft == 0) {
-				cout << "Child removed: " << inCount + 1 << endl;
+			else if (inCircle[i] = true && teacher == inCount && ducksLeftFunc == 0) {
+				cout << "Child removed: " << inCount +1 << endl;
 				inCircle[i] = false;
 				inCircle[size]--;
 				ducksLeftFunc = ducksLeft;
 			}
+			//i++;
 			inCount++;
 			teacher++;
-		}
-
 	}
 }
